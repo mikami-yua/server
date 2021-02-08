@@ -24,6 +24,13 @@ typedef struct user_frnd {
 	struct list_head h_nodel;
 }USER_FRND;
 
+extern IM_USER all_user[MAX_USER_MUN];
+extern int reg_user_num;//extern有这个东西但是没有分配空间
+
 int init_all_user_struct(int argc,char **argv);
+
+void user_fill_frndst(FRND_STAT *fs,int count ,IM_USER *u);
+
+int user_friend_add(IM_USER *u,int uid);
 
 #endif // !SERV_USER_H

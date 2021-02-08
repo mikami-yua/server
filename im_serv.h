@@ -15,6 +15,7 @@
 #include"msg_type.h"
 #include"serv_config.h"
 #include"serv_user.h"
+#include"serv_handle.h"
 
 typedef struct thread_args {
 	pthread_t t_tid;
