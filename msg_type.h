@@ -111,6 +111,8 @@ typedef struct frnd_op_resp {
 	FRND_STAT fre_ok_frnd[0];//好友的状态
 }FRND_RESP;
 
+#define MAX_CHAT_MSG (512-sizeof(MSG_HDR))
+
 /*
 聊天信息
 */

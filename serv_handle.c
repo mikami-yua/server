@@ -258,6 +258,8 @@ int handle_client_msg(int* uid, int fd, char* buf, int n) {
 	LOGOUT_MSG* lo;
 	FRND_OP* f;
 
+	int* fid, cnt, rid;
+
 	//拿到msgheader
 	MSG_HDR* h = (MSG_HDR*)buf;
 	short m_type, m_len;
@@ -306,27 +308,27 @@ int handle_client_msg(int* uid, int fd, char* buf, int n) {
 	{
 	case MSG_REG:
 		if (dec_reg_msg() >= 0) {
-			return handle_reg_msg();
+			return handle_reg_msg(uid,fd,r);
 		}
 		break;
 	case MSG_LOGIN:
 		if (dec_login_msg() >= 0) {
-			return handle_login_msg();
+			return handle_login_msg(uid,fd,li);
 		}
 		break;
 	case MSG_FRNDMGT:
 		if (dec_frndmgt_msg() >= 0) {
-			return handle_frndmgt_msg();
+			return handle_frndmgt_msg(uid,fd,stype,f,fid,cnt);
 		}
 		break;
 	case MSG_CHAT:
 		if (dec_chat_msg() >= 0) {
-			return handle_chat_msg();
+			return handle_chat_msg(uid,fd,buf,n,c,rid);
 		}
 		break;
 	case MSG_LOGOUT:
 		if (dec_logout_msg() >= 0) {
-			return handle_logout_msg();
+			return handle_logout_msg(uid,fd,lo);
 		}
 		break;
 	default:

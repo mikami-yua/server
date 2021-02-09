@@ -16,6 +16,8 @@
 #include"serv_config.h"
 #include"serv_user.h"
 #include"serv_handle.h"
+#include"serv_dec.h"
+#include"serv_enc.h"
 
 typedef struct thread_args {
 	pthread_t t_tid;

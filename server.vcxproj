@@ -141,6 +141,8 @@
   <ItemGroup>
     <ClCompile Include="list.c" />
     <ClCompile Include="server.cpp" />
+    <ClCompile Include="serv_dec.c" />
+    <ClCompile Include="serv_enc.c" />
     <ClCompile Include="serv_handle.c" />
     <ClCompile Include="serv_main.c" />
     <ClCompile Include="serv_user.c" />
@@ -150,6 +152,8 @@
     <ClInclude Include="list.h" />
     <ClInclude Include="msg_type.h" />
     <ClInclude Include="serv_config.h" />
+    <ClInclude Include="serv_dec.h" />
+    <ClInclude Include="serv_enc.h" />
     <ClInclude Include="serv_handle.h" />
     <ClInclude Include="serv_user.h" />
   </ItemGroup>

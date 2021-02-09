@@ -30,6 +30,12 @@
     <ClCompile Include="serv_handle.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="serv_dec.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="serv_enc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="msg_type.h">
@@ -48,6 +54,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="serv_handle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="serv_dec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="serv_enc.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
